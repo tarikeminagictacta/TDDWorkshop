@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boggle.Core", "Boggle.Core\Boggle.Core.csproj", "{3FB2EC4F-DE8A-46E9-A396-ED3B733BB37D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boggle.Core.Tests", "Boggle.Core.Tests\Boggle.Core.Tests.csproj", "{6AD1CABD-348F-4F93-9E6A-829C4196CDC9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3FB2EC4F-DE8A-46E9-A396-ED3B733BB37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FB2EC4F-DE8A-46E9-A396-ED3B733BB37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FB2EC4F-DE8A-46E9-A396-ED3B733BB37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FB2EC4F-DE8A-46E9-A396-ED3B733BB37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AD1CABD-348F-4F93-9E6A-829C4196CDC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AD1CABD-348F-4F93-9E6A-829C4196CDC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AD1CABD-348F-4F93-9E6A-829C4196CDC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AD1CABD-348F-4F93-9E6A-829C4196CDC9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CC06AE76-00EF-4FD5-BEED-EFEE36598B2D}
+	EndGlobalSection
+EndGlobal
