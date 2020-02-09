@@ -5,9 +5,9 @@ namespace Boggle.Core
 {
     public class Game
     {
-        private readonly List<Player> _players;
+        private readonly IReadOnlyList<Player> _players;
 
-        public Game(List<Player> players)
+        public Game(IReadOnlyList<Player> players)
         {
             _players = players;
         }
