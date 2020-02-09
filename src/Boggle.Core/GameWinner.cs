@@ -3,7 +3,7 @@
     public class GameWinner
     {
         public string Name { get; }
-        public PlayerScore Score { get; private set; }
+        public PlayerScore Score { get; }
 
         public GameWinner(string name, PlayerScore score)
         {
