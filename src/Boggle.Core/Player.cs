@@ -5,18 +5,18 @@ namespace Boggle.Core
 {
     public class Player
     {
-        private readonly List<int> _wordScores = new List<int> { 1, 1, 2, 3, 5, 11 };
+        private readonly IReadOnlyList<int> _wordScores = new List<int> { 1, 1, 2, 3, 5, 11 };
 
         public string Name { get; }
-        public List<string> Words { get; }
+        public IReadOnlyList<string> Words { get; }
 
-        public Player(string name, IEnumerable<string> words)
+        public Player(string name, IReadOnlyList<string> words)
         {
             Name = name;
             Words = words.ToList();
         }
 
-        public PlayerScore GetScore(List<string> duplicateWords = null)
+        public PlayerScore GetScore(IReadOnlyList<string> duplicateWords = null)
         {
             var wordsWithoutDuplicates =
                 duplicateWords == null ? Words : Words.Where(word => !duplicateWords.Contains(word)).ToList();
