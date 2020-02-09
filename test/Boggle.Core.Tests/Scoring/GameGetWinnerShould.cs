@@ -34,7 +34,11 @@ namespace Boggle.Core.Tests.Scoring
 
             result.Name.Should().Be("Haris");
             result.Score.Points.Should().Be(22);
-            result.Score.LongestWords.Should().Contain("abilities");
+            var playerScores = game.GetPlayerScores();
+            var tarikPlayerScore = playerScores["Tarik"];
+            var harisPlayerScore = playerScores["Haris"];
+            tarikPlayerScore.Points.Should().Be(harisPlayerScore.Points);
+            tarikPlayerScore.LongestWordsLength.Should().BeLessThan(harisPlayerScore.LongestWordsLength);
         }
 
         [Fact]
@@ -50,7 +54,12 @@ namespace Boggle.Core.Tests.Scoring
 
             result.Name.Should().Be("Haris");
             result.Score.Points.Should().Be(22);
-            result.Score.LongestWords.Count.Should().Be(2);
+            var playerScores = game.GetPlayerScores();
+            var tarikPlayerScore = playerScores["Tarik"];
+            var harisPlayerScore = playerScores["Haris"];
+            tarikPlayerScore.Points.Should().Be(harisPlayerScore.Points);
+            tarikPlayerScore.LongestWordsLength.Should().Be(harisPlayerScore.LongestWordsLength);
+            tarikPlayerScore.LongestWords.Count.Should().BeLessThan(harisPlayerScore.LongestWords.Count);
         }
     }
 }

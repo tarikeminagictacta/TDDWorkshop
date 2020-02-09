@@ -12,7 +12,7 @@ namespace Boggle.Core
             _players = players;
         }
 
-        public Dictionary<string, PlayerScore> GetPlayerPoints()
+        public Dictionary<string, PlayerScore> GetPlayerScores()
         {
             var allWords = _players.SelectMany(player => player.Words);
             var duplicateWords = allWords
@@ -24,7 +24,7 @@ namespace Boggle.Core
 
         public GameWinner GetWinner()
         {
-            var gameResults = GetPlayerPoints();
+            var gameResults = GetPlayerScores();
             var winner = gameResults
                 .OrderByDescending(x => x.Value.Points)
                 .ThenByDescending(x => x.Value.LongestWordsLength)

@@ -4,7 +4,7 @@ using Xunit;
 
 namespace Boggle.Core.Tests.Scoring
 {
-    public class GameGetPlayerResultShould
+    public class GameGetPlayerScoresShould
     {
         [Fact]
         public void ReturnScoreForEachPlayer()
@@ -15,7 +15,7 @@ namespace Boggle.Core.Tests.Scoring
                 new Player("Haris", new List<string> {"again", "access", "achieve", "accurate", "tee", "me"})
             });
 
-            var results = game.GetPlayerPoints();
+            var results = game.GetPlayerScores();
 
             results["Tarik"].Points.Should().Be(2);
             results["Haris"].Points.Should().Be(22);
@@ -30,7 +30,7 @@ namespace Boggle.Core.Tests.Scoring
                 new Player("Haris", new List<string> {"again", "access", "achieve", "accurate", "tea", "me"})
             });
 
-            var results = game.GetPlayerPoints();
+            var results = game.GetPlayerScores();
 
             results["Tarik"].Points.Should().Be(1);
             results["Haris"].Points.Should().Be(10);
@@ -46,7 +46,7 @@ namespace Boggle.Core.Tests.Scoring
                 new Player("Adis", new List<string> { "access", "tree", "tea" })
             });
 
-            var results = game.GetPlayerPoints();
+            var results = game.GetPlayerScores();
 
             results["Tarik"].Points.Should().Be(0);
             results["Haris"].Points.Should().Be(7);
