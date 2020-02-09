@@ -9,18 +9,23 @@ namespace Boggle.Core
 
         public string Name { get; }
         public List<string> Words { get; }
-        
+
         public Player(string name, IEnumerable<string> words)
         {
             Name = name;
             Words = words.ToList();
         }
 
-        public int GetPoints(List<string> duplicateWords = null)
+        public PlayerScore GetScore(List<string> duplicateWords = null)
         {
             var wordsWithoutDuplicates =
-                duplicateWords == null ? Words : Words.Where(word => !duplicateWords.Contains(word));
-            return wordsWithoutDuplicates.Select(WordScore).Sum();
+                duplicateWords == null ? Words : Words.Where(word => !duplicateWords.Contains(word)).ToList();
+            var points = wordsWithoutDuplicates.Select(WordScore).Sum();
+            var longestWords = wordsWithoutDuplicates
+                                  .GroupBy(x => x.Length)
+                                  .OrderByDescending(x => x.Key)
+                                  .FirstOrDefault()?.ToList();
+            return new PlayerScore(points, longestWords);
         }
 
         private int WordScore(string word)

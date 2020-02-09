@@ -69,9 +69,9 @@ namespace Boggle.Core.Tests.Scoring
         private void AssertExpectedPointsForWords(int expectedPoints, params string[] words)
         {
             var player = new Player("Tarik", words);
-            var result = player.GetPoints();
+            var result = player.GetScore();
 
-            result.Should().Be(expectedPoints);
+            result.Points.Should().Be(expectedPoints);
         }
     }
 }

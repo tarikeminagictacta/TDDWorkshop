@@ -5,3 +5,4 @@ C:\TDDWorkshop\Boggle\Boggle.Core\obj\Debug\netcoreapp3.1\Boggle.Core.AssemblyIn
 C:\TDDWorkshop\Boggle\Boggle.Core\obj\Debug\netcoreapp3.1\Boggle.Core.AssemblyInfo.cs
 C:\TDDWorkshop\Boggle\Boggle.Core\obj\Debug\netcoreapp3.1\Boggle.Core.dll
 C:\TDDWorkshop\Boggle\Boggle.Core\obj\Debug\netcoreapp3.1\Boggle.Core.pdb
+C:\TDDWorkshop\Boggle\Boggle.Core\obj\Debug\netcoreapp3.1\Boggle.Core.csprojAssemblyReference.cache
